@@ -2,7 +2,7 @@
 ## Using Microbiome Modelling Toolbox (MMT)/mgPipe functions (integrated with COBRAToolbox)
 1. *createMultipleSpeciesModel* is the function used to generate a community model. This function can be used to create a community of any size.
 2.	Each model should be provided with a name tag. This helps identify which model/organism in the community the reaction belongs to. Tags are added as a prefix ‘M1_HEX’. 
-3.	Consider the example of a two-species community, where organism A is *Bacteroides thetaiotaomicron*, and organism B is *Faecalibacterium prausnitzii*. After generating the community model, examine the number of reactions and metabolites in the community compartment ‘[u].’ 
+3.	Consider the example of a two-species community, with *Bacteroides thetaiotaomicron* and *Faecalibacterium prausnitzii*. After generating the community model, examine the number of reactions and metabolites in the community compartment ‘[u].’ 
 
 |                       Organism                       | B.thetaiotaomicron     | F.prausnitzii          |                              Community                              |
 |:----------------------------------------------------:|------------------------|-----------------------|:-------------------------------------------------------------------:|
