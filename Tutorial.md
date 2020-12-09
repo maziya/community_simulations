@@ -4,17 +4,17 @@
 2.	Each model should be provided with a name tag. This helps identify which model/organism in the community the reaction belongs to. Tags are added as a prefix ‘M1_HEX’. 
 3.	Consider the example of a two-species community, with *Bacteroides thetaiotaomicron* and *Faecalibacterium prausnitzii*. After generating the community model, examine the number of reactions and metabolites in the community compartment ‘[u].’ 
 
-|                       Organism                       | B.thetaiotaomicron     | F.prausnitzii          |                              Community                              |
+|                                              | B.thetaiotaomicron     | F.prausnitzii          |                              Community                              |
 |:----------------------------------------------------:|------------------------|-----------------------|:-------------------------------------------------------------------:|
 | Number of  metabolites                               |          1176          |          833          |                         2327 (1176+833+318)                         |
 | Number of  reactions (including  exchange reactions) |          1528          |          1030         |          2876 (1528+1030+318(excluding the sink reactions))         |
 | Number of exchange reactions                         | 280 + 3 sink reactions | 150 + 1 sink reaction | 321 (union of exchange reactions, includes 3 common sink reactions) |
 
-4.	Exchange reactions of each model in the community are denoted with a prefix of ‘IEX_,’ whereas the community compartment exchanges are indicated as ‘EX_.’
+4.	Exchange reactions of each model in the community are denoted with a prefix of ‘IEX_abc[e],’ whereas the community compartment exchanges are indicated as ‘EX_abc[u].’
 5.	Set the biomass reactions of both models as the objective functions of the community model. 
 6.	Add constraints to the exchange reactions in the community compartment, which mimic the medium components for the growth of the community. By default, all the lower bounds (lb) values for the community exchange reactions will be set to -1000.
-7.	In this example, all exchanges are provided with a constraint of -1. The lower bound (lb) of the reactions are typically constrained.
-8.	In cases where specific ‘diets’ need to be used as constraints, try the adaptVMHDietToAGORA function suitable for models and diets obtained from AGORA and VMH, respectively. 
+7.	In this example, all exchanges are provided with a constraint of -1. 
+8.	In cases where specific ‘diets’ need to be used as constraints, try the adaptVMHDietToAGORA function suitable for models and [diets](https://www.vmh.life/#nutrition) obtained from AGORA and VMH, respectively. 
 9.	In other cases, refer to experimental literature for the best medium components required for the growth of the particular microbe. Also, check [KOMODO](https://komodo.modelseed.org/) from ModelSEED, which will help in identifying the components for different media. 
 10.	optimizeCbModel can be used to compute growth rates with FBA, using any LP solver (such as Gurobi, CPLEX) 
 
